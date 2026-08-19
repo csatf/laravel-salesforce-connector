@@ -1,0 +1,51 @@
+{
+    "name": "csatf/laravel-salesforce-connector",
+    "description": "Connectivity layer for CSATF Laravel apps talking to Salesforce: opinionated Forrest client-credentials config, SOQL escaping and query building, queryMore pagination, a health probe, and a test fake.",
+    "type": "library",
+    "license": "proprietary",
+    "keywords": ["csatf", "laravel", "salesforce", "soql", "forrest"],
+    "authors": [
+        {
+            "name": "CSATF Engineering",
+            "email": "engineering@csatf.org"
+        }
+    ],
+    "require": {
+        "php": "^8.2",
+        "illuminate/contracts": "^11.0 || ^12.0",
+        "illuminate/support": "^11.0 || ^12.0",
+        "omniphx/forrest": "^3.0"
+    },
+    "require-dev": {
+        "csatf/laravel-devtools": "^1.1",
+        "orchestra/testbench": "^9.0 || ^10.0"
+    },
+    "repositories": [
+        { "type": "vcs", "url": "https://github.com/csatf/laravel-devtools.git" }
+    ],
+    "autoload": {
+        "psr-4": {
+            "Csatf\\LaravelSalesforceConnector\\": "src/"
+        }
+    },
+    "autoload-dev": {
+        "psr-4": {
+            "Csatf\\LaravelSalesforceConnector\\Tests\\": "tests/"
+        }
+    },
+    "extra": {
+        "laravel": {
+            "providers": [
+                "Csatf\\LaravelSalesforceConnector\\SalesforceConnectorServiceProvider"
+            ]
+        }
+    },
+    "config": {
+        "sort-packages": true,
+        "allow-plugins": {
+            "pestphp/pest-plugin": true
+        }
+    },
+    "minimum-stability": "stable",
+    "prefer-stable": true
+}
