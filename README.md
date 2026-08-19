@@ -251,7 +251,8 @@ vendor/bin/phpstan analyse
 vendor/bin/pint
 ```
 
-The suite resolves to Laravel 12 locally because `csatf/laravel-devtools` is
-still capped at `^12.0`. That cap is development-only — consuming apps never
-install devtools, and Laravel 13 support is verified separately by resolving the
-package without it.
+The suite resolves to Laravel 13 / Testbench 11 locally, via
+`csatf/laravel-devtools` ^1.3. Laravel 11 and 12 support is declared and honoured
+by the constraints, but is not what the local suite exercises — devtools itself
+requires Laravel 12+, so a Laravel 11 test environment has to be resolved
+without it.

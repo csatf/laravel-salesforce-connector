@@ -6,6 +6,19 @@ All notable changes to this package are documented here. This project adheres to
 
 ## [Unreleased]
 
+## [0.2.1] - 2026-08-20
+
+### Changed
+- Documentation only; no code or constraint changes.
+- Supersedes the note in 0.2.0 about a development-only Laravel 12 cap. That cap
+  came from `csatf/laravel-devtools`, which gained Laravel 13 support in v1.2.0.
+  This package's own suite now resolves to Laravel 13.26.1 / Testbench 11.2.0
+  natively — all 87 tests pass there, so Laravel 13 support no longer needs to be
+  verified by a separate devtools-free resolution.
+- Note that devtools v1.3.0 requires Laravel 12+, so a Laravel 11 *test*
+  environment must be resolved without it. This package's own runtime support for
+  Laravel 11 is unchanged.
+
 ## [0.2.0] - 2026-08-19
 
 ### Added
