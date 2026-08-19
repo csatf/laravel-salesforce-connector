@@ -238,6 +238,10 @@ class RosterRepository
 }
 ```
 
+## Requirements
+
+PHP 8.2+, Laravel 11 / 12 / 13, `omniphx/forrest` ^3.0.
+
 ## Development
 
 ```sh
@@ -246,3 +250,8 @@ vendor/bin/pest
 vendor/bin/phpstan analyse
 vendor/bin/pint
 ```
+
+The suite resolves to Laravel 12 locally because `csatf/laravel-devtools` is
+still capped at `^12.0`. That cap is development-only — consuming apps never
+install devtools, and Laravel 13 support is verified separately by resolving the
+package without it.

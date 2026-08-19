@@ -6,6 +6,21 @@ All notable changes to this package are documented here. This project adheres to
 
 ## [Unreleased]
 
+## [0.2.0] - 2026-08-19
+
+### Added
+- Laravel 13 support: `illuminate/contracts` and `illuminate/support` widened to
+  `^11.0 || ^12.0 || ^13.0`, and `orchestra/testbench` to `^9.0 || ^10.0 ||
+  ^11.0`. Verified against Laravel 13.26.1 / Testbench 11.2.0 / PHP 8.4 — the
+  full suite passes. `omniphx/forrest` ^3.0 already allowed `^13.0`.
+
+### Note
+- Running this package's *own* test suite resolves to Laravel 12, because the
+  `csatf/laravel-devtools` dev dependency is still capped at `^12.0`. That is a
+  development-only constraint and does not affect consuming applications, which
+  never install devtools. Laravel 13 compatibility was verified by resolving the
+  package without devtools. Widening devtools will lift the dev cap.
+
 ## [0.1.0] - 2026-08-19
 
 Initial extraction from `csatf/compliance-api` (`8-salesforce-roster-endpoints`).
